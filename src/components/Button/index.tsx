@@ -1,10 +1,10 @@
 import './style.css'
 type ButtonProps = {
-    text:string,
-    type:"default"|"primary"
+    text: string,
+    type: "default" | "primary"
 }
-export function Button(props:ButtonProps){
-    return(
-        <button  className={`btn-${props.type}`}>{props.text}</button>
+export function Button(props: ButtonProps) {
+    return (
+        <button className={`btn-${props.type}`}>{props.text}</button>
     )
 }

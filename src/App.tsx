@@ -1,24 +1,17 @@
 import './App.css'
+import { NavMenu } from './components/NavMenu'
 
-import { Button } from './components/Button'
-import { Title } from './components/Title'
-import { Form } from './components/Form'
+import { Home } from './pages/Home'
+import { Login } from './pages/Login'
+import { Register } from './pages/Register'
 
 function App() {
   return (
     <div id="App">
-      <header>
-        <Title text='Bem vindo' />
-      </header>
-      <main>
-        <div className="action-buttons">
-          <Button text="Login" type='primary'/>
-          <Button text="Cadastro" type='default'/>
-        </div>
-        <div className='form-container'>
-          <Form/>
-        </div>
-      </main>
+      <Home />
+      <Login />
+      <Register/>
+      <NavMenu/>
     </div>
   )
 }

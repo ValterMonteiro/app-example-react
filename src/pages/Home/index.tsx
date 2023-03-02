@@ -2,8 +2,6 @@ import './style.css'
 
 import { Button } from '../../components/Button'
 import { Title } from '../../components/Title'
-import { NavMenu } from '../../components/NavBarMenu'
-import { Login } from '../Login'
 import { Link } from 'react-router-dom'
 
 export function Home() {
@@ -22,7 +20,6 @@ export function Home() {
                     <Link to={`/Register`}>
                         <Button text="Criar Conta" type='primary' />
                     </Link>
-                    {/* <NavMenu /> */}
                 </div>
             </main>
         </>

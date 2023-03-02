@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { Home } from './pages/Home'
 
-import { NavMenu } from './components/NavMenu'
+import { NavBarMenu } from './components/NavBarMenu'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
 
@@ -14,15 +14,10 @@ function App() {
       <div id="App">
 
         <BrowserRouter>
-        <NavMenu />
+          <NavBarMenu />
           <Routes>
-            {/* <Home /> */}
             <Route path="/" element={<Home />} />
-            {/* <NavMenu/> */}
-            {/* <Route path="/" element={<NavMenu />} /> */}
-            {/* <Login /> */}
             <Route path="/Login" element={<Login />} />
-            {/* <Register/> */}
             <Route path="/Register" element={<Register />} />
           </Routes>
         </BrowserRouter>

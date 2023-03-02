@@ -2,7 +2,7 @@ import './style.css'
 
 import { Button } from '../../components/Button'
 import { Title } from '../../components/Title'
-import { NavMenu } from '../../components/NavMenu'
+import { NavMenu } from '../../components/NavBarMenu'
 import { Login } from '../Login'
 import { Link } from 'react-router-dom'
 

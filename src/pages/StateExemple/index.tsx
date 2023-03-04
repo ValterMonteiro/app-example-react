@@ -1,12 +1,19 @@
 import './styles.css'
 
+import { useState } from 'react';
+
 export function StateExemple() {
+
+    const [name, setName] = useState('');
+
     console.log('renderizou');
-    let name = 'Caio';
+//    let name = 'Caio';
 
     function handleInput(event){
-        name = event.target.value;
+
+        setName(event.target.value);
         console.log(name);
+        
     }
 
     return (

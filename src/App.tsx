@@ -8,6 +8,7 @@ import { NavBarMenu } from './components/NavBarMenu'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
 import { StateExemple } from './pages/StateExemple'
+import { Gallery } from './components/Gallery'
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
         <BrowserRouter>
           <NavBarMenu />
           <Routes>
-            {/*             <Route path="/" element={<Home />} />
- */}
-            <Route path='/' element={<StateExemple/>} />
+            {/*<Route path="/" element={<Home />}/>*/}
+            <Route path='/' element={<Gallery/>} />
+            <Route path='/StateExemple' element={<StateExemple/>} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} />
           </Routes>

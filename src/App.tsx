@@ -18,8 +18,8 @@ function App() {
         <BrowserRouter>
           <NavBarMenu />
           <Routes>
-            {/*<Route path="/" element={<Home />}/>*/}
-            <Route path='/' element={<Gallery/>} />
+            <Route path="/" element={<Home />}/>
+            <Route path='/Gallery' element={<Gallery/>} />
             <Route path='/StateExemple' element={<StateExemple/>} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} />

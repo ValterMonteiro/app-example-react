@@ -20,6 +20,9 @@ export function Home() {
                     <Link to={`/Register`}>
                         <Button text="Criar Conta" type='primary' />
                     </Link>
+                    <Link to={`/Gallery`}>
+                        <Button text="Veja a galeria" type='primary' />
+                    </Link>
                 </div>
             </main>
         </>

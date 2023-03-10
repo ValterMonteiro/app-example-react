@@ -8,3 +8,13 @@
  .galleryArrow{
     color: white;
  }
+
+ .gallery p{
+   color: white;
+ }
+ .galleryDetails{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+ }

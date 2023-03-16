@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 
 import { Gear as Settings, House, User } from "phosphor-react";
 import { Link } from 'react-router-dom'

@@ -1,23 +1,33 @@
+import './styles.css'
 import { Button } from '../Button';
 
 type ContactCardProps = {
   nome: String,
-  children: React.ReactNode
+  email: String,
+  /* children: React.ReactNode */
 
 }
 
-export async function ContactCard() {
+export function ContactCard({ nome, email/* , children  */ }: ContactCardProps) {
 
-  let response = await fetch(`https://randomuser.me/api/json`);
-
-  let dadosContato = await response.json();
 
   return (
     <>
-      <section className="contato">
-        <p>nome: {dadosContato.name}</p>
-        <Button text="Detalhes" type='primary' />
-
+      <section className="container">
+        <img src="#" alt="" />
+        <div className='dadosContatos'>
+          <div>
+            {nome}
+          </div>
+          <div>
+            {email}
+            { }
+          </div>
+          <div>
+            {/* {children} */}
+            <Button text="Detalhes" type='primary' />
+          </div>
+        </div>
       </section>
     </>
   )

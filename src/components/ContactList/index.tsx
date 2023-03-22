@@ -1,19 +1,19 @@
+import './styles.css'
+import { ContactCard } from '../ContactCard'
 import { Input } from '../Input'
-import { Title } from '../Title'
-
 
 type AgendaProps = {
   children: React.ReactNode
 }
-export function ContactList() {
+export function ContactList({ children }: AgendaProps) {
   return (
     <>
       <header>
-      </header>
-      <main>
         <Input placeholder='Localizar' type='text' />
-        {/* <Contato /> */}
-
+      </header>
+      <main className='contactList'>
+        {/* <ContactCard /> */}
+        {children}
       </main>
 
     </>

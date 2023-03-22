@@ -1,6 +1,8 @@
+import './styles.css'
 import { Title } from '../../components/Title';
-import { } from '../../components/ContactList';
-import { } from '../../components/ContactCard';
+import { ContactList } from '../../components/ContactList';
+import { ContactCard } from '../../components/ContactCard';
+import { Children } from 'react';
 
 type AgendaProps = {
   children: React.ReactNode
@@ -8,19 +10,19 @@ type AgendaProps = {
 
 export function Agenda() {
   return (
-       <>
-        <header>
-          <Title text='Agenda de Contatos' />
-        </header></>
-        <main>
-    {/* <ContactList> */}
-      {/* <ContactCard/> */}
-      {/* <ContactCard/> */}
-      {/* <ContactCard/> */}
-    {/* </ContactList> */}
-        </main>
-       
-       </> 
+    <>
+      <header>
+        <Title text='Agenda de Contatos' />
+      </header>
+      <main>
+        <ContactList >
+          <ContactCard
+            nome='Valter'
+            email='nome@email.com' />
+        </ContactList>
+      </main>
+
+    </>
 
   )
 }

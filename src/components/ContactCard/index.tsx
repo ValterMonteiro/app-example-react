@@ -1,30 +1,24 @@
 import './styles.css'
 import { Button } from '../Button';
+import { Contact } from '../../Types';
 
 type ContactCardProps = {
-  nome: String,
-  email: String,
-  /* children: React.ReactNode */
-
+  contactData: Contact,
 }
 
-export function ContactCard({ nome, email/* , children  */ }: ContactCardProps) {
 
-
+export function ContactCard({ contactData }: ContactCardProps) {
+  const { name, email, picture } = contactData;
   return (
     <>
-      <section className="container">
-        <img src="#" alt="" />
+      <section className="contactCard">
+        <div>
+          <img src={picture.medium} alt="" />
+        </div>
         <div className='dadosContatos'>
           <div>
-            {nome}
-          </div>
-          <div>
-            {email}
-            { }
-          </div>
-          <div>
-            {/* {children} */}
+            <p>{name.first}</p>
+            <p>{email}</p>
             <Button text="Detalhes" type='primary' />
           </div>
         </div>

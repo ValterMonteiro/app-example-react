@@ -17,7 +17,7 @@ export function Home() {
             </header>
             <main>
                 <Menu>
-                    <Link to={`/Agenda`}>
+                    <Link to={`/Contacts`}>
                         <MenuItem icon={<AddressBook size={24} />} text='Agenda' />
                     </Link>
                     <Link to={`/Gallery`}>

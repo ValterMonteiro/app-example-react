@@ -9,7 +9,7 @@ import { Login } from './pages/Login'
 import { Register } from './pages/Register'
 import { StateExemple } from './pages/StateExemple'
 import { Gallery } from './components/Gallery'
-import { Agenda } from './pages/Agenda'
+import { Contacts } from './pages/Contacts'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path='/Gallery' element={<Gallery />} />
-            <Route path='/Agenda' element={<Agenda />} />
+            <Route path='/Contacts' element={<Contacts />} />
             <Route path='/StateExemple' element={<StateExemple />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} />

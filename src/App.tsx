@@ -11,11 +11,12 @@ import { StateExemple } from './pages/StateExemple'
 import { Gallery } from './components/Gallery'
 import { Contacts } from './pages/Contacts'
 
+
+
 function App() {
   return (
     <>
       <div id="App">
-
         <BrowserRouter>
           <NavBarMenu />
           <Routes>

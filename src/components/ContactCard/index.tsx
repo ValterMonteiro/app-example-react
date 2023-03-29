@@ -1,6 +1,7 @@
 import './styles.css'
 import { Button } from '../Button';
 import { Contact } from '../../Types';
+import { ButtonIU } from '../ButtonUI';
 
 type ContactCardProps = {
   contactData: Contact,
@@ -19,7 +20,8 @@ export function ContactCard({ contactData }: ContactCardProps) {
           <div>
             <p>{name.first}</p>
             <p>{email}</p>
-            <Button text="Detalhes" type='primary' />
+            {/* <Button text="Detalhes" type='primary' /> */}
+            <ButtonIU text="Detalhes" />
           </div>
         </div>
       </section>

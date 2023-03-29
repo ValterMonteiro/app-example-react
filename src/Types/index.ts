@@ -1,12 +1,12 @@
 export type Contact = {
   name: {
-    first: String,
-    last: String,
+    first: string,
+    last: string,
   },
 
-  email: String,
+  email: string,
 
-  picture?: {
-    medium: String,
+  picture: {
+    medium: string
   }
 }

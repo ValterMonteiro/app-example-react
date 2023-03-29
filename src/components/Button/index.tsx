@@ -1,4 +1,5 @@
 import './style.css'
+
 type ButtonProps = {
     text: string,
     type: "default" | "primary"

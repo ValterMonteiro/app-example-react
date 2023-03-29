@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import './styles.css'
 
 type ContactListProps = {
@@ -6,9 +7,11 @@ type ContactListProps = {
 export function ContactList({ children }: ContactListProps) {
   return (
     <>
-      <section className='contactList'>
-        {children}
-      </section>
+      <Box component="span" /* sx={{ p: 2, border: '15px dashed grey' }} */>
+        <section className='contactList'>
+          {children}
+        </section>
+      </Box>
 
     </>
   )

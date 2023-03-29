@@ -7,13 +7,13 @@ export function StateExemple() {
     const [name, setName] = useState('');
 
     console.log('renderizou');
-//    let name = 'Caio';
+    //    let name = 'Caio';
 
-    function handleInput(event){
+    function handleInput(event) {
 
         setName(event.target.value);
         console.log(name);
-        
+
     }
 
     return (

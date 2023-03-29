@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { Menu } from '../../components/Menu'
 import { MenuItem } from '../../components/MenuItem'
 import { AddressBook, ImageSquare } from 'phosphor-react'
+import ButtonAppBar from '../../Layout/AppBar'
 
 export function Home() {
 
@@ -13,6 +14,7 @@ export function Home() {
     return (
         <>
             <header>
+                <ButtonAppBar />
                 <Title text='Bem vindo' />
             </header>
             <main>

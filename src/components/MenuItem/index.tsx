@@ -1,5 +1,4 @@
-import { AddressBook } from 'phosphor-react';
-import { ButtonIU } from '../ButtonUI';
+import { Button } from '@mui/material';
 import './styles.css';
 
 type MenuItemProps = {
@@ -10,8 +9,7 @@ type MenuItemProps = {
 export function MenuItem({ icon, text }: MenuItemProps) {
   return (
     <>
-      <button className='menuItem'>{icon}{text}</button>
-      {/* <ButtonIU text='agenda' /> */}
+      <Button variant="contained" >{icon}{text}</Button>
     </>
   )
 }

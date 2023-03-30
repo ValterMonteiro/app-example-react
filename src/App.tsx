@@ -8,8 +8,8 @@ import { NavBarMenu } from './components/NavBarMenu'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
 import { StateExemple } from './pages/StateExemple'
-import { Gallery } from './components/Gallery'
 import { Contacts } from './pages/Contacts'
+import { GalleryPage } from './pages/GalleryPage'
 
 
 
@@ -21,7 +21,7 @@ function App() {
           <NavBarMenu />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path='/Gallery' element={<Gallery />} />
+            <Route path='/Gallery' element={<GalleryPage />} />
             <Route path='/Contacts' element={<Contacts />} />
             <Route path='/StateExemple' element={<StateExemple />} />
             <Route path="/Login" element={<Login />} />

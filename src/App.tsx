@@ -1,15 +1,12 @@
-import './App.css'
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
 import { Home } from './pages/Home'
-
 import { NavBarMenu } from './components/NavBarMenu'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
 import { StateExemple } from './pages/StateExemple'
 import { Contacts } from './pages/Contacts'
 import { GalleryPage } from './pages/GalleryPage'
+import { CssBaseline } from '@mui/material'
 
 
 
@@ -17,6 +14,7 @@ function App() {
   return (
     <>
       <div id="App">
+        <CssBaseline />
         <BrowserRouter>
           <NavBarMenu />
           <Routes>

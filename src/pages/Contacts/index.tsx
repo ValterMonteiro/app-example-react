@@ -1,41 +1,46 @@
-import './styles.css'
-import { Title } from '../../components/Title';
 import { ContactList } from '../../components/ContactList';
 import { ContactCard } from '../../components/ContactCard';
 import { useEffect, useState } from 'react';
-import { Input } from '../../components/Input';
 import { getContacts } from '../../services/api';
 import { Contact } from '../../Types';
+import { BaseLayout } from '../../Layout/BaseLayout';
+import { TextField, CircularProgress } from '@mui/material';
 
 export function Contacts() {
   const [search, setSearch] = useState('');
+  const [isLoading, setIsLoading] = useState<Boolean>(false);
   const [contacts, setContacts] = useState<Contact[]>([]);
+  const filteredContacts = () => {
+
+  }
 
   useEffect(() => {
     async function listContacts() {
+      setIsLoading(true)
       setContacts(await getContacts())
+      setIsLoading(false)
     }
     listContacts();
-    console.log(contacts);
   }, [])
-
   return (
-    <>
-      <header>
-        <Title text='Agenda de Contatos' />
-      </header>
-      <main>
-        <Input placeholder='Localizar' type='text' />
+    <BaseLayout appBarTitle='Agenda de Contatos'>
+
+      <TextField variant='outlined' fullWidth />
+
+      {/* logica boolean para renderizar ou a loading ou a contactList */}
+      {isLoading ? (
+        <CircularProgress />
+      ) : (
         <ContactList >
+
           {
             contacts.map(contact => {
-              return <ContactCard contactData={contact} />
+              return <ContactCard key={contact.login.uuid} contactData={contact} />
             })
           }
         </ContactList>
-      </main>
-
-    </>
-
-  )
+      )
+      }
+    </BaseLayout>
+  );
 }

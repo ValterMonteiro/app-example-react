@@ -9,7 +9,7 @@ type MenuItemProps = {
 export function MenuItem({ icon, text }: MenuItemProps) {
   return (
     <>
-      <Button variant="contained" >{icon}{text}</Button>
+      <Button variant="outlined" >{icon}{text}</Button>
     </>
   )
 }

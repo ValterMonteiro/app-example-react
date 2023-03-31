@@ -1,5 +1,4 @@
-import { Box } from '@mui/material'
-import './styles.css'
+import { List } from '@mui/icons-material'
 
 type ContactListProps = {
   children: React.ReactNode
@@ -7,12 +6,9 @@ type ContactListProps = {
 export function ContactList({ children }: ContactListProps) {
   return (
     <>
-      <Box component="span" /* sx={{ p: 2, border: '15px dashed grey' }} */>
-        <section className='contactList'>
-          {children}
-        </section>
-      </Box>
-
+      <List sx={{}}>
+        {children}
+      </List>
     </>
   )
 }

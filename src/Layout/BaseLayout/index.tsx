@@ -12,7 +12,18 @@ export function BaseLayout({ children, appBarTitle }: BaseLayoutProps) {
           <Typography variant='h5'> {appBarTitle}</Typography>
         </Toolbar>
       </AppBar>
-      <Box>
+      <Box
+        display='flex'
+        flexDirection='column'
+        alignItems='center'
+        padding={2}
+        mt={10}
+        sx={{
+          bgcolor: "palette.background.default",
+          width: "100%",
+        }}
+        minHeight={100}
+      >
         {children}
       </Box>
     </>

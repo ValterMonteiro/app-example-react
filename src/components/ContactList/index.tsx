@@ -1,4 +1,4 @@
-import { List } from '@mui/icons-material'
+import { List } from '@mui/material'
 
 type ContactListProps = {
   children: React.ReactNode
@@ -6,7 +6,7 @@ type ContactListProps = {
 export function ContactList({ children }: ContactListProps) {
   return (
     <>
-      <List sx={{}}>
+      <List>
         {children}
       </List>
     </>

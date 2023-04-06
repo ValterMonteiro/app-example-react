@@ -1,6 +1,6 @@
 import { ContactList } from '../../components/ContactList';
 import { ContactCard } from '../../components/ContactCard';
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { getContacts } from '../../services/api';
 import { Contact } from '../../Types';
 import { BaseLayout } from '../../Layout/BaseLayout';
@@ -10,8 +10,13 @@ export function Contacts() {
   const [search, setSearch] = useState('');
   const [isLoading, setIsLoading] = useState<Boolean>(false);
   const [contacts, setContacts] = useState<Contact[]>([]);
-  const filteredContacts = () => {
 
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value)
+  }
+
+  const filteredContacts = (contact: Contact) => {
+    return contact.name.first.toLowerCase().includes(search.toLowerCase())
   }
 
   useEffect(() => {
@@ -25,21 +30,27 @@ export function Contacts() {
   return (
     <BaseLayout appBarTitle='Agenda de Contatos'>
 
-      <TextField variant='outlined' fullWidth />
+      <TextField
+        label="Outlined"
+        variant='outlined'
+        fullWidth
+        value={search}
+        onChange={handleChange}
+      />
 
       {/* logica boolean para renderizar ou a loading ou a contactList */}
-      {isLoading ? (
+      {isLoading ?
         <CircularProgress />
-      ) : (
-        <ContactList >
+        : (
+          <ContactList >
 
-          {
-            contacts.map(contact => {
-              return <ContactCard key={contact.login.uuid} contactData={contact} />
-            })
-          }
-        </ContactList>
-      )
+            {
+              contacts.filter(filteredContacts).map(contact => {
+                return <ContactCard key={contact.login.uuid} contactData={contact} />
+              })
+            }
+          </ContactList>
+        )
       }
     </BaseLayout>
   );
